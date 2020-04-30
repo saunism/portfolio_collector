@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'main.css' %}">
+
+</head>
+<body class="golosovanie">
+
+    <header id="golos">
+
+        <div class="menu">
+            <a href="/"><button class="menubtn">Главная</button></a>
+            <a href=""><button class="menubtn">О сервисе</button></a>
+            <a href=""><button class="menubtn">Лента портфолио</button></a>
+            {% if request.user is None %}
+                <a href="/log_in"><button class="exit">Вход</button></a> 
+            {% elif request.user is not None %}
+                <a href="/profile"><button class="exit">Профиль</button></a> 
+            {% endif %}
+        </div>
+
+        
+
+    </header>
+<
+
+    <div class="auth" align="center">
+        <form method="POST">
+            <br>
+        {% csrf_token %}
+        {% if messages %}
+
+                        {% for message in messages %}
+                        <p align = "center"><button class="delete">{{message}}</button></p>
+                        {% endfor %}
+
+                    {% endif %}
+        <p class="auth_text">Регистрация</p>
+        <p class="auth_info">Зарегистрируйтесь в нашем сервисе. <br> Это позволит вам создавать портфолио и просматривать чужие.</p>
+        <p><input type="text"  class="login" placeholder="Логин" name='login'></p>
+        <p><input type="text"  class="login" placeholder="E-mail" name = 'email'></p>
+        <p><input type="password" placeholder="Пароль" class="password"  name = 'password'></p>
+        <p><input type="password" placeholder="Подтверждение пароля" class="password" name="password1"></p>
+        <button class="button_reg" type="submit">Зарегистрироваться</button>
+        </form>
+        
+        <a href="/log_in"><button class="button_auth">Есть аккаунт? Войти</button></a>
+
+    </div>
+
+    
+
+
+
+</body></html>

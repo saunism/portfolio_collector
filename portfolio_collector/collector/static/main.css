@@ -1,0 +1,410 @@
+
+.menu{
+    width: 100%;
+    margin-bottom: 9%;
+}
+#golos{
+    background-image: none;
+}
+.menubtn{
+    height: 60px;
+    color: rgb(136, 136, 136);
+    font-size: 30px;
+    width: 25%;
+    background-color: #1F1F1F;
+    border-width: 0px;
+    transition-duration: 0.1s;
+    transition-property: all;
+}
+.menubtn:hover{
+    height: 53px;
+    border-bottom-width: 7px;
+    border-bottom-color: rgb(0, 174, 255);
+}
+.menuplace{
+    background-color:#1F1F1F ;
+    height: 100px;
+}
+#centertext,#cenetertext1{
+    text-align: center;
+}
+.createdvotes{
+    margin: 3px;
+    height: 50px;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 0px;
+    width: 40%;
+    margin-bottom: 10px;
+    background-color:rgb(26, 158, 219) ;
+}
+.exit{
+    background-color: #1F1F1F;
+    border-width: 0px;
+    height: 60px;
+    color: rgb(136, 136, 136);
+    font-size: 30px;
+    width: 25%;
+}
+.exit:hover{
+    height: 53px;
+    border-bottom-width: 7px;
+    border-bottom-color: rgb(0, 174, 255);
+}
+.logo{
+    width: 60px;
+    height: 60px;
+}
+.gavno{
+    color: rgb(136, 136, 136);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5%;
+}
+header{
+    background-image: url("images/background.jpg");
+    background-repeat:no-repeat ;
+    background-size: cover;
+}
+.vote_name{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+.vote_disc{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(185, 185, 185);
+}
+.golosovanie{
+    background-color: #24292E;
+}
+.auth{
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-bottom: 20%;
+    border-radius: 15px;
+    background-color: #2C363F;
+}
+.auth_text{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.choose{
+    border-radius: 13px;
+    height: 40px;
+    width: 50%;
+    border-width: 1px;
+    border-color: #1F1F1F;
+    border-style: solid;
+}
+.auth_info{
+    color:rgb(153, 153, 153) ;
+}
+.login,.password{
+    height: 40px;
+    width: 70%;
+    font-size: 15px;
+    padding-left: 30px;
+    border-radius: 10px;
+}
+.footerinfo{
+    text-decoration: none;
+    color: gray;
+}
+.button_reg,.button_auth{
+    width: 50%;
+    height: 60px;
+    border-style: solid;
+    border-radius: 15px;
+    margin-top: 3%;
+    margin-bottom: 12%;
+    font-weight: 800;
+    border-width: 0px;
+    font-size: 20px;
+    color: rgb(82, 82, 82);
+}
+.button_reg{
+    width: 80%;
+    margin-bottom: 10px;
+    background-color:rgb(26, 158, 219) ;
+}
+.button_auth{
+    background-color: orange;
+}
+.profilesettname{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(189, 189, 189);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.create_portfolio{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    border-radius: 13px;
+    background-color: #2C363F;
+}
+.article_text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 95%;
+    border-radius: 13px;
+}
+.delete{
+    height: 60px;
+    border-style: solid;
+    border-radius: 15px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: 800;
+    border-width: 0px;
+    font-size: 20px;
+    color: rgb(82, 82, 82);
+    margin-top: 0px;
+    width: 80%;
+    color: rgb(206, 206, 206);
+    background-color: rgb(206, 66, 66);
+}
+.prof{
+    width: 70%;
+}
+.elementoflenta{
+    margin-top:2%;
+    border-radius: 30px;
+    margin-left: 12%;
+    margin-right: 12%;
+    width: 80%;
+    padding: 3px;
+    background-color:rgb(44, 54, 63)  ;
+}
+.username{
+    margin-left: 40px;
+    color: gray;
+    font-style: italic;
+}
+#first{
+    margin-left: 30%;
+}
+.delete_variant{
+    margin-left: 10px;
+    height: 60px;
+    border-style: solid;
+    border-radius: 15px;
+    font-weight: 800;
+    border-width: 0px;
+    color: rgb(206, 206, 206);
+    background-color: rgb(206, 66, 66);
+    font-size: 15px;
+    float: none;
+    width: 20%;
+}
+.vote_variant{
+    margin-top: 30px;
+    width: 50%;
+}
+.newvote{
+    margin-bottom: 50px;
+    background-color: rgb(230, 177, 79);
+    width: 90%;
+    height: 80px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(211, 155, 52);
+}
+.save{
+    background-color: rgb(57, 131, 57);
+    color: rgb(139, 139, 139);
+}
+.profwindow{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.vote_ans{
+    background-color: rgb(0, 174, 255);
+    border-radius: 10px;
+    height: 50px;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    width: 80%;
+    border-width: 0px;
+    margin: 20px;
+}
+.vote_info{
+    margin: 20px;
+    float: right;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 17px;
+    color: white;
+    width: 10%;
+    background-color: #2C363F;
+    border-width: 3px;
+    border-color: rgb(0, 174, 255);
+    transition: all 0.2s;
+    border-style: solid;
+}
+.vote_info:hover{
+    cursor: unset;
+    background-color: 	#00FF6F;
+}
+.vote{
+    border-radius: 10px;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: rgb(44, 54, 63) ;
+}
+.start{
+    height: 80px;
+    width: 30%;
+    border-width: 0px;
+    border-radius: 10px;
+    background-color: #FFF072;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    transition-duration: 0.5s;
+    transition-property: all;
+    margin-bottom: 3%;
+    
+}
+.start:hover{
+    background-color:rgb(218, 205, 88) ;
+}
+button{
+    cursor: pointer;
+}
+h1{
+    font-size: 50px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5%;
+    text-align: center;
+}
+.ability{
+    border-radius: 13px;
+    text-align: center;
+    margin-left: 8%;
+    float: left;
+}
+.func{
+    font-size: 20px;
+    font-weight: 600;
+}
+.underpicture{
+    color: rgb(167, 167, 167);
+    font-style: italic;
+}
+.funcimg{
+    height: 296px;
+    width: 296px;
+    border-radius: 12px;
+}
+.abilitys{
+    text-align: center;
+}
+.footer{            /*класс*/
+    text-align: center;
+    font-size: 20px;
+    width: 33.3%;
+    float: left;
+    background-color: #24292E;
+    color:rgb(255, 255, 255) ;
+}
+.footerinfo{
+    text-decoration: none;
+    color: gray;
+    text-align: left;
+    margin-left: 4%
+}
+
+@media only screen and (max-width:450px){
+    .menubtn{
+        width: 100%;
+    }
+    .exit{
+        width: 100%;
+    }
+    .footer{
+        margin: 0px;
+        width: 100%;
+        float: inline-end;
+    }
+    .gavno{
+        font-size: 30px;
+    }
+    .start{
+        width: 70%;
+    }
+    .vote_info{
+        float: none;
+        width: 30%;
+    }
+    .auth{
+        margin-left:10% ;
+        margin-right: 10%;
+    }
+    .button_reg,.button_auth{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width : 670px)and (min-width:450px){
+    .menubtn{
+        width: 100%;
+    }
+    .exit{
+        width: 100%;
+    }
+    .footer{
+        margin: 0px;
+        width: 100%;
+        float: inline-end;
+    }
+    .gavno{
+        font-size: 30px;
+    }
+    .start{
+        width: 70%;
+    }
+    .vote_info{
+        float: none;
+        width: 30%;
+    }
+    .auth{
+        margin-left:10% ;
+        margin-right: 10%;
+    }
+}
+@media only screen and (max-width : 1762px)and (min-width:670px){
+    .vote_info{
+        float: none;
+        width: 30%;
+    }
+    .logo{
+        width: 30px;
+        height: 30px;
+    }
+    .menubtn{
+        width: 23%;
+        font-size:20px ;
+    }   
+    .exit{
+        width: 23%;
+        font-size:20px ;       
+    }
+    .footer{
+        margin: 0px;
+        width: 100%;
+        float: inline-end;
+    }
+    .auth{
+        margin-left:30% ;
+        margin-right: 30%;
+    }
+}

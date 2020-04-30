@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'main.css' %}">
+
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="/"><button class="menubtn">Главная</button></a>
+            <a href=""><button class="menubtn">О сервисе</button></a>
+            <a href=""><button class="menubtn">Лента портфолио</button></a>
+            {% if user.is_authenticated%}
+                <a href="/profile"><button class="exit">Профиль</button></a> 
+            {% else %}
+                <a href="/log_in"><button class="exit">Вход</button></a> 
+            {% endif %}
+        </div>
+        <p class="gavno">Простой и удобный сервис поможет вам создать <br>своё протфолио и удобно его пополнять </p>
+        <p align="center"><a href="/portfolio"><button class="start">ПЕРЕЙТИ К СОЗДАНИЮ ПОРТФОЛИО</button></a></p>
+    </header>
+    <main>
+        <h1>С помощью нашего сервиса вы можете</h1>
+        <div class="ability">
+            
+            <p class="func">Создавать портфолио</p>
+            <p class="underpicture">Вы можете создавать портфолио,<br> а также в любой момент его <br>отредактировать и пополнить</p>
+        </div>
+        <div class="ability">
+            
+            <p class="func">Делиться своим портфолио</p>
+            <p class="underpicture">Вы можете отправить своё портфолио как <br>работодателю, так и своим знакомым</p>
+        </div>
+        <div class="ability">
+            
+            <p class="func">Искать работников</p>
+            <p class="underpicture">Вы можете смотреть подробную<br> информацию о работнике, а также искать <br> работников по фильтрам</p>
+        </div>
+        
+        <div class="ability">
+            
+            <p class="func">Загружать проекты</p>
+            <p class="underpicture">Вы можете загрузить ссылки на проекты<br>если они у вас есть</p>
+        </div>
+        <div class="ability">
+            
+            <p class="func">Загружать грамоты</p>
+            <p class="underpicture">Вы можете загрузить ссылки на ваши <br>сертификаты и грамоты </p>
+        </div>
+        <div class="ability">
+            
+            <p class="func">Поиск портфолио</p>
+            <p class="underpicture">Можно воспользоваться поиском по вашей <br>специальности и посмотреть опыт других лудей</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+                <p>Обратная связь</p>
+                <p><a class="footerinfo" href="https://freevoter.github.io/free-voting/report.html"> Сообщить об ошибке</a>  </p>
+                <p> </p>
+                <p> </p>
+                <p> </p>
+        </div>
+    </footer>
+
+</body></html>

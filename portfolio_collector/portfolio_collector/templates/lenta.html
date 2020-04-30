@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск работников</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'main.css' %}">
+
+</head>
+<body class="golosovanie">
+    <header id="golos">
+        <div class="menu">
+            <a href="/"><button class="menubtn">Главная</button></a>
+            <a href=""><button class="menubtn">О сервисе</button></a>
+            <a href=""><button class="menubtn">Лента портфолио</button></a>
+            {% if request.user is None %}
+                <a href="/log_in"><button class="exit">Вход</button></a> 
+            {% elif request.user is not None %}
+                <a href="/profile"><button class="exit">Профиль</button></a> 
+            {% endif %}
+        </div>
+        <form method = "POST">
+        {% csrf_token %}
+                <p align = "center"><input type="search" name = "experience"class="login vote_variant" placeholder="Опыт работы(число лет)"></p>
+                <p align = "center">
+                <select class="choose" name ="profession">
+                    <option value="Автослесарь">Автослесарь</option>
+                    <option value="Бармен">Бармен</option>
+                    <option value="Водитель">Водитель</option>
+                    <option value="Гардеробщик">Гардеробщик</option>
+                    <option value="Детский воспитатель">Детский воспитатель</option>
+                    <option value="Егерь">Егерь</option>
+                    <option value="Животновод">Животновод</option>
+                    <option value="Зоолог">Зоолог</option>
+                    <option value="Инженер">Инженер</option>
+                    <option value="Кровельщик">Кровельщик</option>
+                    <option value="Лечащий врач">Лечащий врач</option>
+                    <option value="Массажист">Массажист</option>
+                    <option value="Натурщик">Натурщик</option>
+                    <option value="Оператор">Оператор</option>
+                    <option value="Программист">Программист</option>
+                    <option value="Разведчик">Разведчик</option>
+                    <option value="Столяр">Столяр</option>
+                    <option value="Таможенник">Таможенник</option>
+                    <option value="Учитель">Учитель</option>
+                    <option value="Физик">Физик</option>
+                </select></p>
+                <p align="center"><input type="submit" value="Найти" class="button_auth"></p>
+                
+        </form>
+  {% for i in workers %}
+    <div class="elementoflenta">
+        <p class="profilesettname">{{i.author_ful_name}}</p>
+        
+        <p align="center"><a href="/user/{{i.author_id}}"><button class="button_reg">Перейти к портфолио работника</button></a></p><p class="profilesettname">Опыт работы: {{i.experience}}</p>
+        <p class="username">Город: {{i.city}}</p>
+    </div>
+{% endfor %}
+    <footer>
+            <div class="footer">
+                    <p>Обратная связь</p>
+                    <p><a class="footerinfo" href="https://freevoter.github.io/free-voting/report.html"> Сообщить об ошибке</a>  </p>
+                    <p> </p>
+                    <p> </p>
+                    <p> </p>
+            </div>
+            
+        </footer>
+
+</body></html>

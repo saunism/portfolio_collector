@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Создание портфолио</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'main.css' %}">
+
+</head>
+    <body>
+    <header>
+        <div class="menu">
+            <a href="/"><button class="menubtn">Главная</button></a>
+            <a href=""><button class="menubtn">О сервисе</button></a>
+            <a href=""><button class="menubtn">Лента портфолио</button></a>
+            {% if request.user is None %}
+                <a href="/log_in"><button class="exit">Вход</button></a> 
+            {% elif request.user is not None %}
+                <a href="/profile"><button class="exit">Профиль</button></a> 
+            {% endif %}
+        </div>
+      <h1>Портфолио {{ full_name }}</h1>
+    </header>
+        <body>
+            <form method="POST">
+
+            {% csrf_token %}
+            <div class="create_portfolio" >
+            <br>
+            {% if city == None%}
+                <h3 class="auth_text">Город проживания: Не указан</h3>
+            {% else %}
+                <h3 class="auth_text">Город проживания:{{ city }}</h3>
+            {% endif %}
+            
+            <br>
+            {% if profession == None%}
+                <h3 class="auth_text">Профессия: Не указана</h3>
+            {% else %}
+                <h3 class="auth_text">Профессия: {{ profession }}</h3>
+            {% endif %}
+            {% if experience == None%}
+                 <h3 class="auth_text">Стаж работы: Не указан</h3>
+            {% else %}
+                <h3 class="auth_text">Стаж работы: {{ experience}}</h3>
+            {% endif %}
+            {% if experience == None%}
+                 <h3 class="auth_text">Образование: Не указано</h3>
+            {% else %}
+                <h3 class="auth_text">Образование: {{ education }}</h3>
+            {% endif %}
+            
+            
+            <br>
+            <h3 class="auth_text">Описание опыта работы</h3>
+            {% if experience == None%}
+                 <p align="center"class="article_text">Описание работы отсутствует</p>
+            {% else %}
+                <p align="center"class="article_text">{{ discription }}</p>
+            {% endif %}
+            
+    </div>
+</form>
+</body>
+</html>

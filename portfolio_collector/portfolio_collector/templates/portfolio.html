@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Создание портфолио</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'main.css' %}">
+
+</head>
+    <body>
+    <header>
+        <div class="menu">
+            <a href="/"><button class="menubtn">Главная</button></a>
+            <a href=""><button class="menubtn">О сервисе</button></a>
+            <a href=""><button class="menubtn">Лента портфолио</button></a>
+            {% if request.user is None %}
+                <a href="/log_in"><button class="exit">Вход</button></a> 
+            {% elif request.user is not None %}
+                <a href="/profile"><button class="exit">Профиль</button></a> 
+            {% endif %}
+        </div>
+      <h1>Создание портфолио</h1>
+    </header>
+        <body>
+            <form method="POST">
+
+            {% csrf_token %}
+            <div class="create_portfolio" >
+            <br>
+            <h3 class="auth_text">Выберите Город проживания</h3>
+            <select class="choose" name = "city">
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Екатеринбург">Екатеринбург</option>
+            </select>
+            <br>
+            <h3 class="auth_text">Выберите профессию</h3>
+            <p align = "center">
+                <select class="choose" name ="profession">
+                    <option value="Автослесарь">Автослесарь</option>
+                    <option value="Бармен">Бармен</option>
+                    <option value="Водитель">Водитель</option>
+                    <option value="Гардеробщик">Гардеробщик</option>
+                    <option value="Детский воспитатель">Детский воспитатель</option>
+                    <option value="Егерь">Егерь</option>
+                    <option value="Животновод">Животновод</option>
+                    <option value="Зоолог">Зоолог</option>
+                    <option value="Инженер">Инженер</option>
+                    <option value="Кровельщик">Кровельщик</option>
+                    <option value="Лечащий врач">Лечащий врач</option>
+                    <option value="Массажист">Массажист</option>
+                    <option value="Натурщик">Натурщик</option>
+                    <option value="Оператор">Оператор</option>
+                    <option value="Программист">Программист</option>
+                    <option value="Разведчик">Разведчик</option>
+                    <option value="Столяр">Столяр</option>
+                    <option value="Таможенник">Таможенник</option>
+                    <option value="Учитель">Учитель</option>
+                    <option value="Физик">Физик</option>
+                </select>
+            </p>
+            
+            <input type="text" name="experience" class="login vote_variant" placeholder="Стаж работы(Введите число)">
+            <input type="text" name="full_name" class="login vote_variant" placeholder="Ф.И.О. Полностью">
+            <h3 class="auth_text">Образование</h3>
+            <select class="choose" name="education">
+                <option value="Среднее">Среднее</option>
+                <option value="Среднее не оконченное">Среднее не оконченное</option>
+                <option value="Среднее профессиональное">Среднее профессиональное</option>
+                <option value="Высшее">Высшее</option>
+                <option value="Высшее не оконченное">Высшее не оконченное</option>
+                <option value="Высшее профессиональное">Высшее профессиональное</option>
+            </select> 
+            <br>
+            <p align="center"><textarea name="discription" cols="10" rows="10" class="article_text" placeholder="Краткое описание опыта работы"></textarea></p>
+            <button type="submit" class="button_auth">Опубликовать Портфолио</button>
+    </div>
+</form>
+</body>
+</html>   
