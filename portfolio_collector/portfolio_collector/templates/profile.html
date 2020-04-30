@@ -47,7 +47,7 @@
             {% else %}
                 <h3 class="auth_text">Стаж работы: {{ experience}}</h3>
             {% endif %}
-            {% if experience == None%}
+            {% if education == None%}
                  <h3 class="auth_text">Образование: Не указано</h3>
             {% else %}
                 <h3 class="auth_text">Образование: {{ education }}</h3>
@@ -56,11 +56,14 @@
             
             <br>
             <h3 class="auth_text">Описание опыта работы</h3>
-            {% if experience == None%}
+            {% if discription == None%}
                  <p align="center"class="article_text">Описание работы отсутствует</p>
             {% else %}
                 <p align="center"class="article_text">{{ discription }}</p>
             {% endif %}
+            
+            <img src="{{ sertificate }}" alt=""class="sertificate">
+            
             
     </div>
 </form>

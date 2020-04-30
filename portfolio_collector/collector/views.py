@@ -18,7 +18,7 @@ def registration(request):
                 return render(request,'registration.html')
             if password1==password2:
                 User.objects.create_user(username = name,password = password1)
-                return redirect('/sign_in')
+                return redirect('/log_in')
             elif password1!=password2:
                 messages.error(request, 'Пароли отличаются друг от друга')
                 return render(request,'registration.html')
@@ -57,9 +57,9 @@ def create_portfolio(request):
         full_name = request.POST.get('full_name')
         education = request.POST.get('education')
         discription = request.POST.get('discription')
-        
+        sertificate = request.POST.get('sertificate')
         portfolios.create(author_full_name = full_name,author_id = request.user.id,city=city,profession=profession,
-        experience=experience,education=education,discription=discription)
+        experience=experience,education=education,discription=discription,sertificate=sertificate)
         print(city,profession,experience,full_name,education,discription)
         return render(request,'portfolio.html')
     else:
@@ -72,10 +72,10 @@ def show_profile(request):
         for i in profiles:
             context={'city':i.city,'profession':i.profession,
             'experience':i.experience,'education':i.education
-            ,'discription':i.discription,'full_name':i.author_full_name}
+            ,'discription':i.discription,'full_name':i.author_full_name,'sertificate':i.sertificate}
         return render(request,'profile.html',context)
     else:
-        return redirect('/sign_in')
+        return redirect('/log_in')
 def show_user(request,id):
     if request.user.is_authenticated:
 
@@ -84,10 +84,10 @@ def show_user(request,id):
         for i in profiles:
             context={'city':i.city,'profession':i.profession,
             'experience':i.experience,'education':i.education
-            ,'discription':i.discription,'full_name':i.author_full_name}
+            ,'discription':i.discription,'full_name':i.author_full_name,'sertificate':i.sertificate}
         return render(request,'profile.html',context)
     else:
-        return redirect('/sign_in')
+        return redirect('/log_in')
 def show_list(request):
     if request.user.is_authenticated:
         experience = request.POST.get('experience')

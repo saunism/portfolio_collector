@@ -8,3 +8,4 @@ class Portfolio(models.Model):
     experience = models.IntegerField()
     education = models.CharField(max_length=100,null=True)
     discription = models.TextField(null=True)
+    sertificate = models.TextField(null=True)

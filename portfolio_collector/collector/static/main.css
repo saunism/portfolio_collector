@@ -135,6 +135,10 @@ header{
 .button_auth{
     background-color: orange;
 }
+.sertificate{
+    width: 50%;
+    border-radius: 13px;
+}
 .profilesettname{
     text-align: center;
     font-size: 30px;
